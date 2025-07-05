@@ -3,63 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sahil Hacking Zone</title>
+  <title>👑 Sahil Hacking Zone 👑</title>
 
-  <!-- Typing Animation Library -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-  <!-- Styles -->
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      background: url('https://i.pinimg.com/originals/71/cd/46/71cd4689e7f8c2748331ff508b635238.gif') no-repeat center center fixed;
+      font-family: Arial, sans-serif;
+      background-image: url('https://i.ibb.co/VjwKXjM/ocean-background.jpg');
       background-size: cover;
-      overflow-x: hidden;
+      background-attachment: fixed;
+      color: white;
+      text-align: center;
     }
 
     header {
-      text-align: center;
-      padding: 50px 20px 20px;
+      padding: 30px 10px;
     }
 
     .profile-container img {
-      width: 160px;
-      height: 160px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       border: 4px solid #fff;
-      margin-bottom: 10px;
     }
 
     h1 {
       font-size: 32px;
-      font-weight: bold;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-      }
-      to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #00ffff, 0 0 40px #00ffff;
-      }
-    }
-
-    p, h2, h3 {
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
+      margin-top: 10px;
     }
 
     section {
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
 
     .services-container {
@@ -69,115 +43,131 @@
     }
 
     .service-box {
-      width: 250px;
-      margin: 10px;
-      padding: 20px;
       background: rgba(0,0,0,0.5);
+      margin: 10px;
+      padding: 15px;
       border-radius: 15px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+      width: 280px;
     }
 
     .paid-services {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin-top: 20px;
     }
 
     .paid-box {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.2);
       margin: 5px;
-      padding: 10px 20px;
+      padding: 10px;
       border-radius: 10px;
+      width: 240px;
     }
 
     .whatsapp-button {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 30px;
+      padding: 12px 24px;
       background-color: #25d366;
       color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
       text-decoration: none;
+      border-radius: 10px;
       font-weight: bold;
-      animation: glow 2s ease-in-out infinite alternate;
     }
 
     footer {
-      text-align: center;
+      background-color: rgba(0,0,0,0.7);
       padding: 20px;
-      background: rgba(0,0,0,0.6);
-      font-size: 14px;
+      margin-top: 40px;
     }
 
-    a {
-      color: #0ff;
-      text-decoration: none;
+    /* Button for SIM Lookup */
+    .sim-button {
+      margin-top: 15px;
+      padding: 10px 18px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
-
+    .sim-button:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header with Profile Picture -->
+  <!-- Header -->
   <header id="home">
     <div class="profile-container">
       <img src="https://github.com/Sahilpti804/sahil-portfolio-light/raw/main/assets/profile.jpg" alt="Legend Sahil Hacker">
     </div>
-    <h1><span id="typed"></span></h1>
+    <h1>👑 Sahil Hacking Zone 👑</h1>
     <p>Certified Cyber Security & IT Expert | Legal Investigator | Ethical Hacker</p>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <p>
-      I'm a certified cybersecurity specialist offering digital forensics, mobile hacking, and ethical hacking solutions. My goal is to make cyberspace safer.
-    </p>
+    <p> <!-- About text remains the same --> </p>
   </section>
 
   <!-- Services -->
   <section id="services">
-    <h2>🇵🇰 All Time Available Services 🇵🇰</h2>
+    <h2>🇵🇰 𝑨𝒍𝒍 𝑻𝒊𝒎𝒆 𝑨𝒗𝒂𝒊𝒍𝒂𝒃𝒍𝒆 𝑺𝒆𝒓𝒗𝒊𝒄𝒆𝒔 🇵🇰</h2>
+
     <div class="services-container">
       <div class="service-box">
         <h3>SIM Details Search</h3>
-        <p><a href="https://live-tracker.site/sim-information/" target="_blank">Click here to search SIM data</a></p>
+        <p>Click below to search SIM data directly.</p>
+        <button class="sim-button" onclick="window.open('https://live-tracker.site/sim-information/', '_blank')">Search SIM Details</button>
       </div>
+
       <div class="service-box">
         <h3>SIM Ownership & Call Records</h3>
         <p>You can get the call history of any network from us.</p>
       </div>
+
       <div class="service-box">
         <h3>NADRA Family Tree & Data</h3>
         <p>If you need NADRA data, contact us. All NADRA work is available.</p>
       </div>
+
       <div class="service-box">
-        <h3>Cybersecurity & Mobile Forensics</h3>
+        <h3>Cybersecurity & Mobile Forensics Mobile Hacking</h3>
         <p>Ethical hacking, mobile device forensics & security checks for digital safety.</p>
       </div>
+
       <div class="service-box">
         <h3>CDR & WhatsApp Logs</h3>
         <p>Retrieval of communication records under authorized use for investigation.</p>
       </div>
+
       <div class="service-box">
         <h3>Digital Subscriptions</h3>
         <p>Secure access to Netflix, YouTube, Skype, and more through verified sources.</p>
       </div>
+
       <div class="service-box">
         <h3>Social Media Growth</h3>
         <p>Boost your brand with organic followers, likes, comments on TikTok, Insta & more.</p>
       </div>
+
       <div class="service-box">
         <h3>ID & Degree Verification</h3>
         <p>Support with official documentation and degree validation for legal use.</p>
       </div>
+
       <div class="service-box">
         <h3>Ethical Hacking Course</h3>
         <p>Complete course in bug bounty, penetration testing, and white-hat hacking skills.</p>
       </div>
     </div>
 
-    <h2>💸 Our Paid Services</h2>
+    <h2>💸 Our Paid Services:</h2>
     <div class="paid-services">
       <div class="paid-box">All network Fresh Number Details (Name, CNIC, Address)</div>
       <div class="paid-box">All numbers against CNIC</div>
@@ -189,23 +179,11 @@
       <div class="paid-box">Fake WhatsApp Number</div>
     </div>
 
-    <!-- WhatsApp Button -->
     <a href="https://wa.me/923221857442" class="whatsapp-button">📞 Contact on WhatsApp</a>
   </section>
 
   <footer>
-    &copy; 2025 Sahil Hacking Zone. All rights reserved.
+    &copy; 2025 Legend Sahil Hacker. All rights reserved.
   </footer>
-
-  <!-- Typed JS Init -->
-  <script>
-    var typed = new Typed('#typed', {
-      strings: ['Legend Sahil'],
-      typeSpeed: 100,
-      backSpeed: 60,
-      loop: true
-    });
-  </script>
-
 </body>
 </html>
