@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>👑 𝗟𝗲𝗴𝗲𝗻𝗱 𝘀𝗮𝗵𝗶𝗹 𝗵𝗮𝗰𝗸𝗲𝗿 👑</title>
-  
+  <title>👑 Sahil Hacking Zone 👑</title>
+
   <!-- React & Babel -->
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
@@ -13,186 +13,109 @@
   <!-- Styles -->
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
-      background-size: cover;
-      color: #00ffe1;
-      overflow-x: hidden;
+      padding: 0;
     }
 
-    header, section, footer {
-      padding: 40px 20px;
+    header {
       text-align: center;
-      backdrop-filter: brightness(1) saturate(1.2);
+      padding: 30px;
     }
 
-    h1, h2, p, li {
-      color: #00ffe1;
-    }
-
-    .profile-container {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      margin: 30px auto;
+    header img {
+      width: 120px;
       border-radius: 50%;
-      background: radial-gradient(circle at center, #00ffe1 0%, #002b3d 100%);
-      box-shadow: 0 0 30px #00ffe1, 0 0 60px rgba(0, 255, 225, 0.2), inset 0 0 20px rgba(0,255,225,0.3);
-      animation: hackerPulse 4s infinite ease-in-out, rotateAura 20s linear infinite;
-      transition: transform 0.5s ease;
-      overflow: hidden;
+      border: 3px solid #00ffcc;
     }
 
-    .profile-container img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid rgba(0, 255, 225, 0.6);
-      filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 8px #00ffe1);
-      animation: flicker 3s infinite ease-in-out;
+    h1 {
+      font-size: 32px;
+      margin: 10px 0;
     }
 
-    @keyframes hackerPulse {
-      0%, 100% {
-        box-shadow: 0 0 30px #00ffe1, 0 0 60px rgba(0, 255, 225, 0.2), inset 0 0 20px rgba(0,255,225,0.3);
-      }
-      50% {
-        box-shadow: 0 0 50px #00ffe1, 0 0 90px rgba(0, 255, 225, 0.4), inset 0 0 25px rgba(0,255,225,0.4);
-      }
+    p {
+      font-size: 16px;
+      color: #ccc;
     }
 
-    @keyframes rotateAura {
-      0% { transform: rotate(0deg) scale(1); }
-      100% { transform: rotate(360deg) scale(1.03); }
-    }
-
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-      }
-      20%, 22%, 24%, 55% {
-        opacity: 0.8;
-      }
+    section {
+      padding: 20px;
     }
 
     h2 {
-      text-align: center;
-      color: #00ffe1;
-      font-size: 2.5em;
+      color: #00ffcc;
       margin-top: 20px;
     }
 
     .services-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      padding: 20px;
+      margin-top: 20px;
     }
 
     .service-box {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 20px;
+      background-color: #1c1c1c;
+      padding: 15px;
       border-radius: 10px;
-      width: 280px;
-      box-shadow: 0 0 15px rgba(0,255,255,0.2);
-      transition: 0.3s;
-    }
-
-    .service-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 25px rgba(0,255,255,0.4);
-    }
-
-    .service-box h3 {
-      color: #00ffe1;
-      margin-bottom: 10px;
+      border: 1px solid #00ffcc;
     }
 
     .paid-services {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 15px;
-      max-width: 400px;
-      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
     }
 
     .paid-box {
-      background: rgba(0, 0, 0, 0.6);
-      border: 1px solid #00ffe1;
-      border-radius: 12px;
-      padding: 12px 20px;
-      margin: 10px 0;
-      font-size: 16px;
-      color: #00ffe1;
-      box-shadow: 0 0 8px rgba(0, 255, 225, 0.3);
-      display: flex;
-      align-items: center;
-      transition: 0.3s;
-    }
-
-    .paid-box:hover {
-      background: rgba(0, 0, 0, 0.75);
-      box-shadow: 0 0 15px rgba(0, 255, 225, 0.6);
-    }
-
-    .paid-box::before {
-      content: "✔️";
-      color: #00ffe1;
-      font-size: 18px;
-      margin-right: 10px;
+      background-color: #222;
+      border: 1px solid #00ffcc;
+      padding: 10px;
+      border-radius: 8px;
+      flex: 1 1 200px;
     }
 
     .whatsapp-button {
       display: block;
-      width: 80%;
-      margin: 20px auto;
-      padding: 12px;
-      background-color: #25D366;
-      color: white;
       text-align: center;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
+      background-color: #25D366;
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
       text-decoration: none;
-      box-shadow: 0 0 15px rgba(37, 211, 102, 0.7);
-      transition: background 0.3s, box-shadow 0.3s;
-    }
-
-    .whatsapp-button:hover {
-      background-color: #1ebc5b;
-      box-shadow: 0 0 20px rgba(37, 211, 102, 1);
-    }
-
-    input, button {
-      outline: none;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 300px;
+      font-weight: bold;
     }
 
     footer {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #00ffe1;
-      font-size: 0.9em;
-      padding: 20px;
+      background-color: #000;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #888;
     }
 
-    a {
-      color: #00ffe1;
-      text-decoration: none;
+    .sim-button {
+      display: block;
+      margin-top: 10px;
+      background-color: #00ffcc;
+      color: #000;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
     }
 
-    a:hover {
-      text-shadow: 0 0 10px #00ffe1;
-    }
-
-    #about {
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 20px;
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 30px;
-      box-shadow: 0 0 25px rgba(0, 255, 225, 0.3);
+    .sim-button:hover {
+      background-color: #00ddaa;
     }
   </style>
 </head>
@@ -203,79 +126,13 @@
     <div class="profile-container">
       <img src="https://github.com/Sahilpti804/sahil-portfolio-light/raw/main/assets/profile.jpg" alt="Legend Sahil Hacker">
     </div>
-    <h1>👑 𝗟𝗲𝗴𝗲𝗻𝗱 𝗦𝗮𝗵𝗶𝗹 𝗛𝗮𝗰𝗸𝗲𝗿 👑</h1>
-    <p>Certified Cyber Security & IT Expert | Legal Investigator | Ethical Hacker</p>
-  </header>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      𝐈’𝐦 𝐒𝐚𝐡𝐢𝐥 — 𝐈 𝐬𝐩𝐞𝐜𝐢𝐚𝐥𝐢𝐳𝐞 𝐢𝐧 𝐜𝐫𝐞𝐚𝐭𝐢𝐧𝐠 𝐜𝐮𝐬𝐭𝐨𝐦 𝐜𝐨𝐝𝐞𝐬 𝐚𝐧𝐝 𝐠𝐢𝐯𝐢𝐧𝐠 𝐭𝐡𝐞𝐦 𝐚 𝐮𝐧𝐢𝐪𝐮𝐞, 𝐩𝐫𝐨𝐟𝐞𝐬𝐬𝐢𝐨𝐧𝐚𝐥 𝐥𝐨𝐨𝐤. 𝐈 𝐨𝐟𝐟𝐞𝐫 𝐚 𝐰𝐢𝐝𝐞 𝐫𝐚𝐧𝐠𝐞 𝐨𝐟 𝐞𝐭𝐡𝐢𝐜𝐚𝐥 𝐡𝐚𝐜𝐤𝐢𝐧𝐠 𝐬𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐢𝐧𝐜𝐥𝐮𝐝𝐢𝐧𝐠 𝐬𝐨𝐜𝐢𝐚𝐥 𝐦𝐞𝐝𝐢𝐚 𝐚𝐜𝐜𝐨𝐮𝐧𝐭𝐬 𝐡𝐚𝐜𝐤𝐢𝐧𝐠 𝐚𝐜𝐜𝐨𝐮𝐧𝐭𝐬 𝐫𝐞𝐜𝐨𝐯𝐞𝐫𝐲, 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 𝐚𝐜𝐜𝐞𝐬𝐬 𝐬𝐮𝐩𝐩𝐨𝐫𝐭, 𝐚𝐧𝐝 𝐦𝐨𝐫𝐞. 𝐖𝐡𝐞𝐭𝐡𝐞𝐫 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐚 𝐰𝐞𝐛𝐬𝐢𝐭𝐞, 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐥𝐞𝐚𝐫𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐭𝐞𝐜𝐡𝐧𝐢𝐪𝐮𝐞𝐬 𝐥𝐢𝐤𝐞 𝐦𝐨𝐛𝐢𝐥𝐞 𝐨𝐫 𝐜𝐚𝐦𝐞𝐫𝐚 𝐡𝐚𝐜𝐤𝐢𝐧𝐠, 𝐨𝐫 𝐚𝐫𝐞 𝐥𝐨𝐨𝐤𝐢𝐧𝐠 𝐟𝐨𝐫 𝐭𝐢𝐩𝐬 𝐚𝐧𝐝 𝐭𝐫𝐢𝐜𝐤𝐬 𝐟𝐫𝐨𝐦 𝐚𝐧 𝐞𝐱𝐩𝐞𝐫𝐢𝐞𝐧𝐜𝐞𝐝 𝐬𝐨𝐮𝐫𝐜𝐞 — 𝐈’𝐯𝐞 𝐠𝐨𝐭 𝐲𝐨𝐮 𝐜𝐨𝐯𝐞𝐫𝐞𝐝. 𝐍𝐨𝐭𝐡𝐢𝐧𝐠 𝐢𝐬 𝐢𝐦𝐩𝐨𝐬𝐬𝐢𝐛𝐥𝐞 𝐢𝐟 𝐝𝐨𝐧𝐞 𝐫𝐢𝐠𝐡𝐭. 𝐈𝐟 𝐲𝐨𝐮'𝐫𝐞 𝐬𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐟𝐨𝐫 𝐚 𝐫𝐞𝐚𝐥, 𝐭𝐫𝐮𝐬𝐭𝐞𝐝 𝐡𝐚𝐜𝐤𝐞𝐫 𝐰𝐢𝐭𝐡 𝐬𝐨𝐥𝐢𝐝 𝐫𝐞𝐬𝐮𝐥𝐭𝐬 𝐚𝐧𝐝 𝐚𝐟𝐟𝐨𝐫𝐝𝐚𝐛𝐥𝐞 𝐩𝐫𝐢𝐜𝐢𝐧𝐠, 𝐟𝐞𝐞𝐥 𝐟𝐫𝐞𝐞 𝐭𝐨 𝐫𝐞𝐚𝐜𝐡 𝐨𝐮𝐭 𝐀𝐠𝐚𝐫 𝐀𝐩 𝐁𝐡 𝐀𝐩𝐧𝐞 𝐐𝐚𝐫𝐨𝐛𝐚𝐫 𝐊 𝐋𝐢𝐲𝐞 𝐄𝐚𝐬𝐢 𝐖𝐞𝐛𝐬𝐢𝐭𝐞 𝐁𝐚𝐧𝐰𝐚𝐧𝐚 𝐂𝐡𝐚𝐡𝐭𝐞 𝐇𝐚𝐢 𝐓𝐮𝐦 𝐑𝐚𝐛𝐭𝐚 𝐊𝐫 𝐒𝐚𝐤𝐭𝐲 𝐇𝐚𝐢𝐧 𝐏𝐫𝐨𝐟𝐞𝐬𝐬𝐢𝐨𝐧𝐚𝐥 𝐖𝐨𝐫𝐤 𝐋𝐨𝐰 𝐑𝐚𝐭𝐞 𝐌𝐚𝐢𝐧 𝐄𝐫𝐧𝐢𝐧𝐠 𝐖𝐞𝐛𝐬𝐢𝐭𝐞 𝐬𝐡𝐨𝐩𝐩𝐢𝐧𝐠 𝐰𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐁𝐮𝐬𝐬𝐢𝐧𝐞𝐬 𝐀𝐝𝐯𝐞𝐫𝐭𝐢𝐬𝐞𝐦𝐞𝐧𝐭 𝐖𝐞𝐛𝐬𝐢𝐭𝐞 𝐀𝐥𝐥 𝐂𝐚𝐭𝐞𝐠𝐨𝐫𝐲 𝐖𝐞𝐛𝐬𝐢𝐭𝐞 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥e
-    </p>
-  </section>
-
-  <!-- Service Section Starts Here -->
-  <section id="services">
-    <h2>🇵🇰 𝑨𝒍𝒍 𝑻𝒊𝒎𝒆 𝑨𝒗𝒂𝒊𝒍𝒂𝒃𝒍𝒆 𝑺𝒆𝒓𝒗𝒊𝒄𝒆𝒔🇵🇰 </h2>
-    <div class="services-container">
-      <!-- React Component Mount -->
-      <div class="service-box">
-        <h3>SIM Details Lookup</h3>
-        <div id="sim-lookup-root"></div>
-      </div>
-
-      <div class="service-box">
-        <h3>SIM Ownership & Call Records</h3>
-        <p>You can get the call history of any network from us.</p>
-      </div>
-      <div class="service-box">
-        <h3>NADRA Family Tree & Data</h3>
-        <p>If you need NADRA data, contact us. All NADRA work is available.</p>
-      </div>
-      <div class="service-box">
-        <h3>Cybersecurity & Mobile Forensics Mobile Hacking</h3>
-        <p>Ethical hacking, mobile device forensics & security checks for digital safety.</p>
-      </div>
-      <div class="service-box">
-        <h3>CDR & WhatsApp Logs</h3>
-        <p>Retrieval of communication records under authorized use for investigation.</p>
-      </div>
-      <div class="service-box">
-        <h3>Digital Subscriptions</h3>
-        <p>Secure access to Netflix, YouTube, Skype, and more through verified sources.</p>
-      </div>
-      <div class="service-box">
-        <h3>Social Media Growth</h3>
-        <p>Boost your brand with organic followers, likes, comments on TikTok, Insta & more.</p>
-      </div>
-      <div class="service-box">
-        <h3>ID & Degree Verification</h3>
-        <p>Support with official documentation and degree validation for legal use.</p>
-      </div>
-      <div class="service-box">
-        <h3>Ethical Hacking Course</h3>
-        <p>Complete course in bug bounty, penetration testing, and white-hat hacking skills.</p>
-      </div>
-    </div>
-
-    <h2>💸 Our Paid Services:</h2>
-    <div class="paid-services">
-      <div class="paid-box">All network Fresh Number Details (Name, CNIC, Address)</div>
-      <div class="paid-box">All numbers against CNIC</div>
-      <div class="paid-box">Nadra CNIC Verification</div>
-      <div class="paid-box">Pin Point Location</div>
-      <div class="paid-box">Family Tree</div>
-      <div class="paid-box">CDR (Call Data Record)</div>
-      <div class="paid-box">IMEI Tracking (Stolen or Lost Mob Trace)</div>
-      <div class="paid-box">Fake WhatsApp Number</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>👑 𝗟𝗲𝗴𝗲𝗻𝗱 𝘀𝗮𝗵𝗶𝗹 𝗵𝗮𝗰𝗸𝗲𝗿 👑</title>
-  
+  <title>👑 Sahil Hacking Zone 👑</title>
+
   <!-- React & Babel -->
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
@@ -284,186 +141,109 @@
   <!-- Styles -->
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
-      background-size: cover;
-      color: #00ffe1;
-      overflow-x: hidden;
+      padding: 0;
     }
 
-    header, section, footer {
-      padding: 40px 20px;
+    header {
       text-align: center;
-      backdrop-filter: brightness(1) saturate(1.2);
+      padding: 30px;
     }
 
-    h1, h2, p, li {
-      color: #00ffe1;
-    }
-
-    .profile-container {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      margin: 30px auto;
+    header img {
+      width: 120px;
       border-radius: 50%;
-      background: radial-gradient(circle at center, #00ffe1 0%, #002b3d 100%);
-      box-shadow: 0 0 30px #00ffe1, 0 0 60px rgba(0, 255, 225, 0.2), inset 0 0 20px rgba(0,255,225,0.3);
-      animation: hackerPulse 4s infinite ease-in-out, rotateAura 20s linear infinite;
-      transition: transform 0.5s ease;
-      overflow: hidden;
+      border: 3px solid #00ffcc;
     }
 
-    .profile-container img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid rgba(0, 255, 225, 0.6);
-      filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 8px #00ffe1);
-      animation: flicker 3s infinite ease-in-out;
+    h1 {
+      font-size: 32px;
+      margin: 10px 0;
     }
 
-    @keyframes hackerPulse {
-      0%, 100% {
-        box-shadow: 0 0 30px #00ffe1, 0 0 60px rgba(0, 255, 225, 0.2), inset 0 0 20px rgba(0,255,225,0.3);
-      }
-      50% {
-        box-shadow: 0 0 50px #00ffe1, 0 0 90px rgba(0, 255, 225, 0.4), inset 0 0 25px rgba(0,255,225,0.4);
-      }
+    p {
+      font-size: 16px;
+      color: #ccc;
     }
 
-    @keyframes rotateAura {
-      0% { transform: rotate(0deg) scale(1); }
-      100% { transform: rotate(360deg) scale(1.03); }
-    }
-
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-      }
-      20%, 22%, 24%, 55% {
-        opacity: 0.8;
-      }
+    section {
+      padding: 20px;
     }
 
     h2 {
-      text-align: center;
-      color: #00ffe1;
-      font-size: 2.5em;
+      color: #00ffcc;
       margin-top: 20px;
     }
 
     .services-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      padding: 20px;
+      margin-top: 20px;
     }
 
     .service-box {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 20px;
+      background-color: #1c1c1c;
+      padding: 15px;
       border-radius: 10px;
-      width: 280px;
-      box-shadow: 0 0 15px rgba(0,255,255,0.2);
-      transition: 0.3s;
-    }
-
-    .service-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 25px rgba(0,255,255,0.4);
-    }
-
-    .service-box h3 {
-      color: #00ffe1;
-      margin-bottom: 10px;
+      border: 1px solid #00ffcc;
     }
 
     .paid-services {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 15px;
-      max-width: 400px;
-      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
     }
 
     .paid-box {
-      background: rgba(0, 0, 0, 0.6);
-      border: 1px solid #00ffe1;
-      border-radius: 12px;
-      padding: 12px 20px;
-      margin: 10px 0;
-      font-size: 16px;
-      color: #00ffe1;
-      box-shadow: 0 0 8px rgba(0, 255, 225, 0.3);
-      display: flex;
-      align-items: center;
-      transition: 0.3s;
-    }
-
-    .paid-box:hover {
-      background: rgba(0, 0, 0, 0.75);
-      box-shadow: 0 0 15px rgba(0, 255, 225, 0.6);
-    }
-
-    .paid-box::before {
-      content: "✔️";
-      color: #00ffe1;
-      font-size: 18px;
-      margin-right: 10px;
+      background-color: #222;
+      border: 1px solid #00ffcc;
+      padding: 10px;
+      border-radius: 8px;
+      flex: 1 1 200px;
     }
 
     .whatsapp-button {
       display: block;
-      width: 80%;
-      margin: 20px auto;
-      padding: 12px;
-      background-color: #25D366;
-      color: white;
       text-align: center;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
+      background-color: #25D366;
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
       text-decoration: none;
-      box-shadow: 0 0 15px rgba(37, 211, 102, 0.7);
-      transition: background 0.3s, box-shadow 0.3s;
-    }
-
-    .whatsapp-button:hover {
-      background-color: #1ebc5b;
-      box-shadow: 0 0 20px rgba(37, 211, 102, 1);
-    }
-
-    input, button {
-      outline: none;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 300px;
+      font-weight: bold;
     }
 
     footer {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #00ffe1;
-      font-size: 0.9em;
-      padding: 20px;
+      background-color: #000;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #888;
     }
 
-    a {
-      color: #00ffe1;
-      text-decoration: none;
+    .sim-button {
+      display: block;
+      margin-top: 10px;
+      background-color: #00ffcc;
+      color: #000;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
     }
 
-    a:hover {
-      text-shadow: 0 0 10px #00ffe1;
-    }
-
-    #about {
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 20px;
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 30px;
-      box-shadow: 0 0 25px rgba(0, 255, 225, 0.3);
+    .sim-button:hover {
+      background-color: #00ddaa;
     }
   </style>
 </head>
@@ -474,7 +254,7 @@
     <div class="profile-container">
       <img src="https://github.com/Sahilpti804/sahil-portfolio-light/raw/main/assets/profile.jpg" alt="Legend Sahil Hacker">
     </div>
-    <h1>👑 𝗟𝗲𝗴𝗲𝗻𝗱 𝗦𝗮𝗵𝗶𝗹 𝗛𝗮𝗰𝗸𝗲𝗿 👑</h1>
+    <h1>👑 Sahil Hacking Zone 👑</h1>
     <p>Certified Cyber Security & IT Expert | Legal Investigator | Ethical Hacker</p>
   </header>
 
@@ -482,20 +262,21 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      𝐈’𝐦 𝐒𝐚𝐡𝐢𝐥 — 𝐈 𝐬𝐩𝐞𝐜𝐢𝐚𝐥𝐢𝐳𝐞 𝐢𝐧 𝐜𝐫𝐞𝐚𝐭𝐢𝐧𝐠 𝐜𝐮𝐬𝐭𝐨𝐦 𝐜𝐨𝐝𝐞𝐬 𝐚𝐧𝐝 𝐠𝐢𝐯𝐢𝐧𝐠 𝐭𝐡𝐞𝐦 𝐚 𝐮𝐧𝐢𝐪𝐮𝐞, 𝐩𝐫𝐨𝐟𝐞𝐬𝐬𝐢𝐨𝐧𝐚𝐥 𝐥𝐨𝐨𝐤. 𝐈 𝐨𝐟𝐟𝐞𝐫 𝐚 𝐰𝐢𝐝𝐞 𝐫𝐚𝐧𝐠𝐞 𝐨𝐟 𝐞𝐭𝐡𝐢𝐜𝐚𝐥 𝐡𝐚𝐜𝐤𝐢𝐧𝐠 𝐬𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐢𝐧𝐜𝐥𝐮𝐝𝐢𝐧𝐠 𝐬𝐨𝐜𝐢𝐚𝐥 𝐦𝐞𝐝𝐢𝐚 𝐚𝐜𝐜𝐨𝐮𝐧𝐭𝐬 𝐡𝐚𝐜𝐤𝐢𝐧𝐠 𝐚𝐜𝐜𝐨𝐮𝐧𝐭𝐬 𝐫𝐞𝐜𝐨𝐯𝐞𝐫𝐲, 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 𝐚𝐜𝐜𝐞𝐬𝐬 𝐬𝐮𝐩𝐩𝐨𝐫𝐭, 𝐚𝐧𝐝 𝐦𝐨𝐫𝐞. 𝐖𝐡𝐞𝐭𝐡𝐞𝐫 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐚 𝐰𝐞𝐛𝐬𝐢𝐭𝐞, 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐥𝐞𝐚𝐫𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐭𝐞𝐜𝐡𝐧𝐢𝐪𝐮𝐞𝐬 𝐥𝐢𝐤𝐞 𝐦𝐨𝐛𝐢𝐥𝐞 𝐨𝐫 𝐜𝐚𝐦𝐞𝐫𝐚 𝐡𝐚𝐜𝐤𝐢𝐧𝐠, 𝐨𝐫 𝐚𝐫𝐞 𝐥𝐨𝐨𝐤𝐢𝐧𝐠 𝐟𝐨𝐫 𝐭𝐢𝐩𝐬 𝐚𝐧𝐝 𝐭𝐫𝐢𝐜𝐤𝐬 𝐟𝐫𝐨𝐦 𝐚𝐧 𝐞𝐱𝐩𝐞𝐫𝐢𝐞𝐧𝐜𝐞𝐝 𝐬𝐨𝐮𝐫𝐜𝐞 — 𝐈’𝐯𝐞 𝐠𝐨𝐭 𝐲𝐨𝐮 𝐜𝐨𝐯𝐞𝐫𝐞𝐝. 𝐍𝐨𝐭𝐡𝐢𝐧𝐠 𝐢𝐬 𝐢𝐦𝐩𝐨𝐬𝐬𝐢𝐛𝐥𝐞 𝐢𝐟 𝐝𝐨𝐧𝐞 𝐫𝐢𝐠𝐡𝐭. 𝐈𝐟 𝐲𝐨𝐮'𝐫𝐞 𝐬𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐟𝐨𝐫 𝐚 𝐫𝐞𝐚𝐥, 𝐭𝐫𝐮𝐬𝐭𝐞𝐝 𝐡𝐚𝐜𝐤𝐞𝐫 𝐰𝐢𝐭𝐡 𝐬𝐨𝐥𝐢𝐝 𝐫𝐞𝐬𝐮𝐥𝐭𝐬 𝐚𝐧𝐝 𝐚𝐟𝐟𝐨𝐫𝐝𝐚𝐛𝐥𝐞 𝐩𝐫𝐢𝐜𝐢𝐧𝐠, 𝐟𝐞𝐞𝐥 𝐟𝐫𝐞𝐞 𝐭𝐨 𝐫𝐞𝐚𝐜𝐡 𝐨𝐮𝐭 𝐀𝐠𝐚𝐫 𝐀𝐩 𝐁𝐡 𝐀𝐩𝐧𝐞 𝐐𝐚𝐫𝐨𝐛𝐚𝐫 𝐊 𝐋𝐢𝐲𝐞 𝐄𝐚𝐬𝐢 𝐖𝐞𝐛𝐬𝐢𝐭𝐞 𝐁𝐚𝐧𝐰𝐚𝐧𝐚 𝐂𝐡𝐚𝐡𝐭𝐞 𝐇𝐚𝐢 𝐓𝐮𝐦 𝐑𝐚𝐛𝐭𝐚 𝐊𝐫 𝐒𝐚𝐤𝐭𝐲 𝐇𝐚𝐢𝐧 𝐏𝐫𝐨𝐟𝐞𝐬𝐬𝐢𝐨𝐧𝐚𝐥 𝐖𝐨𝐫𝐤 𝐋𝐨𝐰 𝐑𝐚𝐭𝐞 𝐌𝐚𝐢𝐧 𝐄𝐫𝐧𝐢𝐧𝐠 𝐖𝐞𝐛𝐬𝐢𝐭𝐞 𝐬𝐡𝐨𝐩𝐩𝐢𝐧𝐠 𝐰𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐁𝐮𝐬𝐬𝐢𝐧𝐞𝐬 𝐀𝐝𝐯𝐞𝐫𝐭𝐢𝐬𝐞𝐦𝐞𝐧𝐭 𝐖𝐞𝐛𝐬𝐢𝐭𝐞 𝐀𝐥𝐥 𝐂𝐚𝐭𝐞𝐠𝐨𝐫𝐲 𝐖𝐞𝐛𝐬𝐢𝐭𝐞 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥e
+      Experienced cybersecurity professional providing ethical hacking services and digital investigation support to clients worldwide.
     </p>
   </section>
 
   <!-- Service Section Starts Here -->
   <section id="services">
-    <h2>🇵🇰 𝑨𝒍𝒍 𝑻𝒊𝒎𝒆 𝑨𝒗𝒂𝒊𝒍𝒂𝒃𝒍𝒆 𝑺𝒆𝒓𝒗𝒊𝒄𝒆𝒔🇵🇰 </h2>
+    <h2>🇵🇰 All Time Available Services 🇵🇰</h2>
     <div class="services-container">
-      <!-- React Component Mount -->
       <div class="service-box">
         <h3>SIM Details Lookup</h3>
-        <div id="sim-lookup-root"></div>
+        <p>Click below to search SIM data live.</p>
+        <button class="sim-button" onclick="window.open('https://live-tracker.site/sim-information/', '_blank')">
+          Sim Details Search
+        </button>
       </div>
-
       <div class="service-box">
         <h3>SIM Ownership & Call Records</h3>
         <p>You can get the call history of any network from us.</p>
@@ -540,158 +321,66 @@
       <div class="paid-box">CDR (Call Data Record)</div>
       <div class="paid-box">IMEI Tracking (Stolen or Lost Mob Trace)</div>
       <div class="paid-box">Fake WhatsApp Number</div>
-      <div class="paid-box">Vehicle Details</div>
-      <div class="paid-box">Marriage Certificate (Copy)</div>
-      <div class="paid-box">Death Certificate (Copy)</div>
-      <div class="paid-box">FRC (Family Registration Certificate)</div>
-      <div class="paid-box">Vaccination (Corona, Booster, Polio)</div>
-      <div class="paid-box">Travel History</div>
-      <div class="paid-box">Passport Details</div>
-      <div class="paid-box">Fake Calling Software (Private, Unknown Number)</div>
-      <div class="paid-box">More Trusted Services Available</div>
     </div>
 
-    <a href="https://wa.me/923496049312" class="whatsapp-button">Contact on WhatsApp</a>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/923221857442" class="whatsapp-button">📞 Contact on WhatsApp</a>
   </section>
-  <!-- Service Section Ends Here -->
 
-  <!-- Footer -->
   <footer>
-    © 2025 👑 𝗟𝗲𝗴𝗲𝗻𝗱 𝗦𝗮𝗵𝗶𝗹 𝗛𝗮𝗰𝗸𝗲𝗿 👑. All rights reserved.
+    &copy; 2025 Legend Sahil Hacker. All rights reserved.
   </footer>
 
-  <!-- React Component Script -->
-  <script type="text/babel">
-    const { useState } = React;
-
-    const SimDetailsLookup = () => {
-      const [number, setNumber] = useState('');
-      const [result, setResult] = useState(null);
-
-      const dummyData = {
-        '+923001234567': { operator: 'Jazz', city: 'Karachi' },
-        '+923214567890': { operator: 'Zong', city: 'Lahore' },
-      };
-
-      const sahilNumber = '+923496049312';
-
-      const handleSearch = () => {
-        if (!number) {
-          setResult('Please enter a number.');
-          return;
-        }
-        const formattedNumber = number.startsWith('+') ? number : `+92${number.replace(/^0/, '')}`;
-        const data = dummyData[formattedNumber];
-        if (data) {
-          setResult(`Operator: ${data.operator}, City: ${data.city} — by Sahil | Contact: ${sahilNumber}`);
-        } else {
-          setResult(`Number Not Found — by Sahil | Contact: ${sahilNumber}`);
-        }
-      };
-
-      return (
-        <div style={{ textAlign: 'center', marginTop: '10px' }}>
-          <input
-            type="text"
-            placeholder="Enter number"
-            value={number}
-            onChange={(e) => setNumber(e.target.value)}
-            style={{ padding: '10px', width: '80%', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
-          />
-          <br />
-          <button onClick={handleSearch} style={{ padding: '10px 20px', backgroundColor: '#00ffe1', color: '#000', border: 'none', borderRadius: '5px' }}>
-            Search
-          </button>
-          {result && <p style={{ marginTop: '15px', fontWeight: 'bold' }}>{result}</p>}
-          <a
-            href={`https://wa.me/${sahilNumber.replace('+', '')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: 'inline-block', marginTop: '10px', padding: '10px 20px', backgroundColor: '#25D366', color: 'white', borderRadius: '30px', textDecoration: 'none' }}
-          >
-            Chat on WhatsApp
-          </a>
-        </div>
-      );
-    };
-
-    ReactDOM.render(<SimDetailsLookup />, document.getElementById('sim-lookup-root'));
-  </script>
 </body>
-</html>￼Enter      <div class="paid-box">Vehicle Details</div>
-      <div class="paid-box">Marriage Certificate (Copy)</div>
-      <div class="paid-box">Death Certificate (Copy)</div>
-      <div class="paid-box">FRC (Family Registration Certificate)</div>
-      <div class="paid-box">Vaccination (Corona, Booster, Polio)</div>
-      <div class="paid-box">Travel History</div>
-      <div class="paid-box">Passport Details</div>
-      <div class="paid-box">Fake Calling Software (Private, Unknown Number)</div>
-      <div class="paid-box">More Trusted Services Available</div>
-    </div>
+</html>￼Enter    <h1>👑 Sahil Hacking Zone 👑</h1>
+    <p>Certified Cyber Security & IT Expert | Legal Investigator | Ethical Hacker</p>
+  </header>
 
-    <a href="https://wa.me/923496049312" class="whatsapp-button">Contact on WhatsApp</a>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Experienced cybersecurity professional providing ethical hacking services and digital investigation support to clients worldwide.
+    </p>
   </section>
-  <!-- Service Section Ends Here -->
 
-  <!-- Footer -->
-  <footer>
-    © 2025 👑 𝗟𝗲𝗴𝗲𝗻𝗱 𝗦𝗮𝗵𝗶𝗹 𝗛𝗮𝗰𝗸𝗲𝗿 👑. All rights reserved.
-  </footer>
-
-  <!-- React Component Script -->
-  <script type="text/babel">
-    const { useState } = React;
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cyber Team Tools</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 60px;
-    }
-    .tool-button {
-      background-color: #0f0f0f;
-      border: 2px solid #00ffcc;
-      color: #00ffcc;
-      padding: 15px 30px;
-      margin: 10px;
-      text-align: center;
-      font-size: 18px;
-      cursor: pointer;
-      border-radius: 10px;
-      transition: background-color 0.3s;
-      text-decoration: none;
-    }
-    .tool-button:hover {
-      background-color: #00ffcc;
-      color: black;
-    }
-  </style>
-</head>
-<body>
-  <h1>Cyber Security Team Tools</h1>
-  <div class="button-container">
-    <a href="https://minahilsimsdata.info/" target="_blank" class="tool-button">Search SimDetail</a>
-  </div>
-</body>
-</html>
-      return (
-        <div style={{ textAlign: 'center', marginTop: '10px' }}>
-          <input
+  <!-- Service Section Starts Here -->
+  <section id="services">
+    <h2>🇵🇰 All Time Available Services 🇵🇰</h2>
+    <div class="services-container">
+      <div class="service-box">
+        <h3>SIM Details Lookup</h3>
+        <p>Click below to search SIM data live.</p>
+        <button class="sim-button" onclick="window.open('https://live-tracker.site/sim-information/', '_blank')">
+          Sim Details Search
+        </button>
+      </div>
+      <div class="service-box">
+        <h3>SIM Ownership & Call Records</h3>
+        <p>You can get the call history of any network from us.</p>
+</div>
+      <div class="service-box">
+        <h3>NADRA Family Tree & Data</h3>
+        <p>If you need NADRA data, contact us. All NADRA work is available.</p>
+      </div>
+      <div class="service-box">
+        <h3>Cybersecurity & Mobile Forensics Mobile Hacking</h3>
+        <p>Ethical hacking, mobile device forensics & security checks for digital safety.</p>
+      </div>
+      <div class="service-box">
+        <h3>CDR & WhatsApp Logs</h3>
+        <p>Retrieval of communication records under authorized use for investigation.</p>
+      </div>
+      <div class="service-box">
+        <h3>Digital Subscriptions</h3>
+        <p>Secure access to Netflix, YouTube, Skype, and more through verified sources.</p>
+      </div>
+      <div class="service-box">
+        <h3>Social Media Growth</h3>
+        <p>Boost your brand with organic followers, likes, comments on TikTok, Insta & more.</p>
+      </div>
+      <div class="service-box">
+        <h3>ID & Degree Verification</h3>
+        <p>Support with official documentation and degree validation for legal use.</p>
+      </div>
+      <div class="service-box">
